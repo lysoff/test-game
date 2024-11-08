@@ -384,7 +384,7 @@
             var lastBannerStates = []
 
             let options = {
-                forciblySetPlatformId: 'msn',
+                forciblySetPlatformId: 'playdeck',
                 'platforms': {
                     'game_distribution': {
                         gameId: ''
@@ -398,6 +398,14 @@
                     'y8': {
                         gameId: ''
                     },
+                    'lagged': {
+                        devId: '',
+                        publisherId: ''
+
+                    },
+                    'facebook': {
+                        placementId: ''
+                    }
                 }
             }
 
@@ -574,9 +582,6 @@
                     },
                     'game_distribution': {
                         containerId: 'banner-container'
-                    },
-                    'msn': {
-                        placement: 'top:728x90'
                     }
                 }
                 bridge.advertisement.showBanner(options)
@@ -670,13 +675,12 @@
             leaderboardSetScoreButton.addEventListener('click', () => {
                 bridge
                     .leaderboard
-                    .setScore(leaderboardScoreInput.value)
-                // .setScore({
-                //     yandex: {
-                //         score: leaderboardScoreInput.value,
-                //         leaderboardName: leaderboardIdInput.value
-                //     }
-                // })
+                    .setScore({
+                        yandex: {
+                            score: leaderboardScoreInput.value,
+                            leaderboardName: leaderboardIdInput.value
+                        }
+                    })
             })
 
             leaderboardShowNativePopupButton.addEventListener('click', () => {
@@ -742,7 +746,7 @@
                         }
                     },
                     'playdeck': {
-                        'amount': 1,
+                        'amount': 0.1,
                         'description': 'your description',
                         'externalId': 'unique order',
                         'photoUrl': 'optional field'
