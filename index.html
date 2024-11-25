@@ -237,8 +237,7 @@
                 <input type="text" id="achievements-name-input" placeholder="Achievement Name">
                 <button id="achievements-unlock-button">Unlock</button>
                 <br>
-                <p>Unlock Status: <span id="achievements-unlock-status"></span></p>
-                <br>
+                <pre id="achievements-unlock-status-container"></pre>
             </div>
             <div class="section" id="remote-config-section" style="display: none">
                 <h2>Remote Config</h2>
@@ -830,6 +829,8 @@
                     }
 
                     bridge.achievements.unlock(options)
+                        .then((result) => achievementsUnlockStatusContainer.innerText = JSON.stringify(result))
+                        .catch((error) => console.log(error))
                 })
 
                 remoteConfigButton.addEventListener('click', () => {
