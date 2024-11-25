@@ -233,8 +233,8 @@
                 <pre id="achievements-list-container"></pre>
                 <button id="achievements-show-native-popup-button">Show Native Popup</button>
                 <hr>
-                <input type="text" id="achievements-achievement-id-input" placeholder="Achievement Id (key)">
-                <input type="text" id="achievements-achievement-name-input" placeholder="Achievement Name">
+                <input type="text" id="achievements-id-input" placeholder="Achievement Id (key)">
+                <input type="text" id="achievements-name-input" placeholder="Achievement Name">
                 <button id="achievements-unlock-button">Unlock</button>
                 <br>
                 <p>Unlock Status: <span id="achievements-unlock-status"></span></p>
@@ -427,9 +427,9 @@
                             adsgramBlockId: ''
                         },
                         'y8': {
-                            gameId: '66f6e9506150c651f3803555',
-                            hostId: 'ca-host-pub-123456',
-                            adsenseId: 'ca-pub-123456',
+                            gameId: '',
+                            hostId: '',
+                            adsenseId: '',
                             adFrequency: '',
                         },
                         'lagged': {
@@ -801,7 +801,7 @@
 
                 achievementsShowNativeButton.addEventListener('click', () => {
                     bridge.achievements.showNativePopup()
-                    .catch((error) => console.log(error))
+                        .catch((error) => console.log(error))
                 })
                 
                 achievementsGetListButton.addEventListener('click', () => {
