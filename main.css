@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Rubik";
+  /*src:  url('assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype')*/
+  src: url(1f3f50a5df95254b.ttf) format("truetype");
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Rubik";
+  background: #363942;
+  background: linear-gradient(0deg, #363942 0%, #1d1f21 50%, #0b0a08 100%);
+  position: relative;
+}
+#game-root {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#game-canvas {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
